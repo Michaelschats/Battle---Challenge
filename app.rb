@@ -1,5 +1,7 @@
 require 'sinatra'
 
+set :session_secret, 'super secret'
+
 get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
